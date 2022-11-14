@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+                <img src="imagenes/logoTunic.png" alt="Tunic">
+            </a>
+        </h1>
+        <nav class="dropdown">
+            <button class="dropbtn">
+                <img src="imagenes/hamburguerMenu.png" alt="Menú hamburguesa">
+            </button>
+            <ul class="dropdown-content">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="fondoPantalla">
+            <div class="contenedor contacto">
+                <div class="saludoJugadores">
+                    <p>En el equipo de <strong>Tunic</strong> nos entusiasma recibir <strong>mensajes</strong> de las personas <strong>seguidoras e interesadas</strong> en el juego.</p>
+                    <figure>
+                        <img src="imagenes/protagonistaSaludando.png" alt="Protagonista saludando">
+                    </figure>
+                </div>
+                <section class="formulario">
+                    <h2>Contacto</h2>
+                    <form action="#" method="get">
+                        <div>
+                            <label for="nombre">Nombre:</label>	
+                            <input id="nombre" type="text" name="nombre" placeholder="Nombre" required>
+                        </div>
+                        <div>
+                            <label for="correo">Correo:</label>	
+                            <input id="correo" type="email" name="correo" placeholder="Correo" required>
+                        </div>
+                        <div>
+                            <label for="mensaje">Mensaje:</label>	
+                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required minlength=10></textarea>
+                        </div>
+                        <div>
+                            <input id="enviar" type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Hecho por Lautaro Pappalardo</p>
+        <nav id="redesFooter">
+            <ul>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="imagenes/facebook.png" alt="Facebook">
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="imagenes/instagram.png" alt="Instagram">
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="imagenes/twitter.png" alt="Twitter">
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

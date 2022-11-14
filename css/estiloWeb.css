@@ -1,0 +1,440 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #fdf4e2;
+	font-family: 'Poppins', 'Trebuchet MS', sans-serif;
+	color: #291b04;
+}
+
+/* Header */
+
+header {
+    background: #c2b161;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    margin: auto;
+    padding: 1em 2em;
+}
+
+header h1 a img:hover {
+	filter: brightness(0) saturate(100%) invert(15%) sepia(66%) saturate(3201%) hue-rotate(333deg) brightness(93%) contrast(93%);
+}
+
+nav {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 50%;
+}
+
+nav ul{
+	float: right;	
+}
+
+nav ul li{
+	list-style: none;
+	float: left;	
+}
+
+header nav ul li a{
+	font-family: 'Rubik', Tahoma, sans-serif;
+	text-decoration: none;
+	float: left;
+	display:block;
+	color: white;
+	font-size: 1.25rem;
+	font-weight: bold;
+	text-align: center;
+	padding: 0.5em 0.75em;
+	position: relative;
+}
+
+header nav ul li a:hover{
+	color: #9e1e35;	
+}
+
+.dropbtn{
+	display: none;
+}
+
+header nav ul li a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background: #9e1e35;
+	position: absolute;
+	bottom: -.2em;
+	left: 0em;
+	right: 0em;
+	transform: scale(0,1);
+	transition: transform ease-in-out 250ms;
+}
+
+header nav ul li a:hover::before{
+	transform: scale(1,1);	
+}
+
+/* Inicio */
+
+#contenedorBienvenida figure img{
+	 max-width: 100%;
+	 display: block;
+}
+
+#contenedorBienvenida h2 {
+    margin: auto;
+    background-color: #291b04;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    padding: 0.75em;
+}
+
+#resaltado {
+    width: 80%;
+    font-size: 2.25rem;
+    color: #291b04;
+    text-align: center;
+    font-weight: bold;
+    margin: 0.5em auto 0.75em auto;
+}
+
+.contenedor {
+	width: 80%;
+	margin: auto;
+}
+
+.contenedor ul {
+	text-decoration: none;
+}
+
+.contenedor h2{
+	margin: 0.75em 0em 0.5em 0em;
+	text-align: center;
+	font-size: 2.25rem;
+}
+
+.contenidoInicio {
+    background-color: #f8e5c0;
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1.5em 0em;
+}
+
+.contenidoInicio figure{
+	width: 50%;
+}
+
+.contenidoInicio figure img{
+	max-width: 100%;
+	display: block;
+}
+
+.textoContenedor {
+    width: calc(50% - 2.5em);
+    margin: 1.25em;
+}
+
+.textoContenedor h4 {
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.textoContenedor p {
+	text-align: center;
+	font-size: 1rem;
+	line-height: 2em;
+	padding: 1rem 0px;
+}
+
+.reverso .textoContenedor{
+    order: -1;
+}
+
+/* Sobre Nosotros */
+
+#distribuidorContenido {
+	background: #e6e6e6;
+	color: #060122;
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	border: 4px solid #060122;
+}
+
+#distribuidorContenido figure {
+	width: 80%;
+}
+
+#distribuidorContenido figure img {
+	max-width: 100%;
+	display: block;
+}
+
+.textoDistribuidor h3 {
+	font-size: 1.75rem;
+	padding: 0.4em 0em;
+}
+
+.textoDistribuidor p {
+	font-size: 1.25rem;
+	text-align: justify;
+	line-height: 30px;
+	padding: 0.4em 0em;
+}
+
+.textoDistribuidor {
+	padding: 1em;
+}
+
+
+
+#equipo h3{
+	font-size: 1.75rem;
+	margin: 1.4em auto;
+	text-align: center;
+}
+
+.grid-equipo {
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5em;
+	padding: 1em;
+	align-items: start;
+	margin: 0em 0em 1.25em 0em;
+}
+
+.integranteEquipo {
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+	flex-direction: column;
+}
+
+#equipo ul li figure{
+	width: 100%;
+}
+
+#equipo ul li figure img {
+	clip-path: circle();
+	max-width: 100%;
+	display: block;
+}
+
+.textoEquipo {
+	width: 95%;
+}
+
+#equipo h4{
+	font-size: 1.5rem;
+	padding: 0.4em 0em 0em 0em;
+	text-align: center;
+}
+
+#equipo p{
+	font-size: 1.25rem;
+	padding: 0.4em 0em;
+	text-align: center;
+}
+
+/* Galeria */
+
+.contenedorAviso {
+	width: 50%;
+	margin: 2em auto;
+	padding: 1.25em;
+	background: #e6e6e6;
+	font-family: 'Rubik', Tahoma, sans-serif;
+	font-weight: bold;
+	color: #060122;
+	display: flex;
+	align-items: center;
+	border: 4px solid #060122;
+}
+
+.contenedorAviso figure {
+	width: 40%;
+}
+
+.contenedorAviso figure img {
+	max-width: 100%;
+	display: block;
+}
+
+.contenedorAviso div {
+	display: block;
+}
+
+.contenedorAviso div p {
+	font-size: 1.2rem;
+}
+
+.llamadaAtencion {
+	font-size: 2.5rem;
+}
+
+.subtitulo {
+	text-align: center;	
+	font-size: 1.25rem;
+}
+
+.grid-imagenes {
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 1.25em 0em;
+	gap: 1.5em;
+	padding: 1em;
+}
+
+.imagenGaleria:hover {
+	filter: opacity(0.8);
+	transform: scale(1.05);
+}
+
+.imagenGaleria figure{
+	width: 100%;
+}
+
+.imagenGaleria figure img{
+	max-width: 100%;
+	display: block;
+}
+
+/* Contacto */
+
+.fondoPantalla{
+	background-image: url("../imagenes/fondoContacto.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.contacto {
+	display: flex;
+}
+
+.saludoJugadores {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.saludoJugadores p {
+	width: 80%;
+	background: #e6e6e6;
+	color: #060122;
+	border: 4px solid #060122;
+	font-size: 1.25rem;
+	text-align: justify;
+	line-height: 30px;
+	padding: 0.8em 0.8em;
+}
+
+.saludoJugadores figure {
+	width: 60%;
+}
+
+.saludoJugadores figure img {
+	max-width: 100%;
+	display: block;
+}
+
+.formulario {
+	width: 50%;
+	background: #c2b161;
+	margin: 1.5em auto;
+	border-radius: 5px;
+	padding: 1em 0em 1em 0em;
+}
+
+.formulario h2 {
+	color: #9e1e35;
+	margin: 1em auto 1em auto;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+form{
+	width: 80%;
+	margin: auto;
+}
+
+form div label {
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+form div p {
+	font-weight: bold;
+	font-size: 1.25rem;
+}
+
+form div input {
+	font-family: 'Poppins', 'Trebuchet MS', sans-serif;
+	border: none;
+    height: 2em;
+    padding: 4px;
+	margin-top: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+	width: calc(100% - 8px);
+}
+
+textarea {
+    font-family: 'Poppins', 'Trebuchet MS', sans-serif;
+    border: none;
+    height: 6.25em;
+    padding: 4px;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+    resize: none;
+    border-radius: 5px;
+    width: calc(100% - 8px);
+}
+
+#enviar {
+	background-color: #9e1e35;
+    color: white;
+	height: 2.5em;
+	margin: auto;
+	font-size: 1rem;
+	cursor: pointer;
+	width: 100%;
+}
+
+/* Footer */
+
+footer{
+	background: #c2b161;
+	margin: auto;
+	padding: 1.25em 2em;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#redesFooter ul li{
+	margin: auto 0.5em;
+}
+
+#redesFooter ul li a figure{
+	width: 32px;
+}
+
+#redesFooter ul li a figure img{
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+#redesFooter ul li a figure img:hover{	
+	filter: brightness(0) saturate(100%) invert(15%) sepia(66%) saturate(3201%) hue-rotate(333deg) brightness(93%) contrast(93%);
+}
