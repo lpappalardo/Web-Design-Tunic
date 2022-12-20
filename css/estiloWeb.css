@@ -13,43 +13,50 @@ body {
 
 header {
     background: #c2b161;
+}
+
+header .contenedor {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-    margin: auto;
-    padding: 1em 2em;
+}
+
+header h1 a img{
+	max-width: 100%;
+	display: block;
+	padding: 0.5em 0px;
 }
 
 header h1 a img:hover {
 	filter: brightness(0) saturate(100%) invert(15%) sepia(66%) saturate(3201%) hue-rotate(333deg) brightness(93%) contrast(93%);
 }
 
-nav {
-    display: inline-block;
-    vertical-align: bottom;
-    width: 50%;
-}
+/* nav {
+    
+} */
 
 nav ul{
-	float: right;	
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
 }
 
 nav ul li{
-	list-style: none;
-	float: left;	
+	display: inline-block;
+	margin-left: 50px;
 }
 
-header nav ul li a{
-	font-family: 'Rubik', Tahoma, sans-serif;
-	text-decoration: none;
-	float: left;
-	display:block;
-	color: white;
+header nav ul li{
+	padding: 31px 0px;
+}
+
+nav ul li a{
+	font-family: 'Rubik', sans-serif;
 	font-size: 1.25rem;
+	color: white;
 	font-weight: bold;
-	text-align: center;
-	padding: 0.5em 0.75em;
-	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
 header nav ul li a:hover{
@@ -60,28 +67,11 @@ header nav ul li a:hover{
 	display: none;
 }
 
-header nav ul li a::before {
-	content: '';
-	display: block;
-	height: 5px;
-	background: #9e1e35;
-	position: absolute;
-	bottom: -.2em;
-	left: 0em;
-	right: 0em;
-	transform: scale(0,1);
-	transition: transform ease-in-out 250ms;
-}
-
-header nav ul li a:hover::before{
-	transform: scale(1,1);	
-}
-
 /* Inicio */
 
-#contenedorBienvenida figure img{
-	 max-width: 100%;
-	 display: block;
+#contenedorBienvenida video{
+	width: 100%;
+	display: block;
 }
 
 #contenedorBienvenida h2 {
@@ -100,11 +90,12 @@ header nav ul li a:hover::before{
     text-align: center;
     font-weight: bold;
     margin: 0.5em auto 0.75em auto;
+	line-height: 1.2;
 }
 
 .contenedor {
 	width: 80%;
-	margin: auto;
+	margin: 0px auto;
 }
 
 .contenedor ul {
@@ -142,12 +133,13 @@ header nav ul li a:hover::before{
 .textoContenedor h4 {
 	text-align: center;
 	font-size: 1.5rem;
+	line-height: 1.2;
 }
 
 .textoContenedor p {
 	text-align: center;
 	font-size: 1rem;
-	line-height: 2em;
+	line-height: 1.8em;
 	padding: 1rem 0px;
 }
 
@@ -183,7 +175,7 @@ header nav ul li a:hover::before{
 .textoDistribuidor p {
 	font-size: 1.25rem;
 	text-align: justify;
-	line-height: 30px;
+	line-height: 1.8;
 	padding: 0.4em 0em;
 }
 
@@ -249,7 +241,7 @@ header nav ul li a:hover::before{
 	margin: 2em auto;
 	padding: 1.25em;
 	background: #e6e6e6;
-	font-family: 'Rubik', Tahoma, sans-serif;
+	font-family: 'Rubik', sans-serif;
 	font-weight: bold;
 	color: #060122;
 	display: flex;
@@ -306,58 +298,80 @@ header nav ul li a:hover::before{
 	display: block;
 }
 
-/* Contacto */
 
-.fondoPantalla{
-	background-image: url("../imagenes/fondoContacto.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+/* Blog */
+
+.grid-blog {
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5em;
+	margin: 1.25em 0em;
 }
+
+.grid-blog li figure{
+	width: 100%;
+}
+
+.grid-blog li figure img{
+	max-width: 100%;
+	display: block;
+	border-radius: 4px 4px 0px 0px;
+}
+
+.elementoBlog:hover {
+	filter: opacity(0.8);
+}
+
+.textoBlog {
+	background-color: #f8e5c0;
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	min-height: 148px;
+	border-radius: 0px 0px 4px 4px;
+}
+
+.textoBlog h3{
+	line-height: 1.2;
+	margin: 0px 0px 0.6em 0px;
+}
+
+.textoBlog p{
+	line-height: 1.8;
+}
+
+/* Contacto */
 
 .contacto {
 	display: flex;
 }
 
-.saludoJugadores {
+.complementoForm {
 	width: 50%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-
+	margin: 1.5em auto;
+	background: url("../imagenes/contacto/arteTunic.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.saludoJugadores p {
-	width: 80%;
-	background: #e6e6e6;
-	color: #060122;
-	border: 4px solid #060122;
+.complementoForm p {
+	padding: 1.5em;
 	font-size: 1.25rem;
-	text-align: justify;
 	line-height: 30px;
-	padding: 0.8em 0.8em;
-}
-
-.saludoJugadores figure {
-	width: 60%;
-}
-
-.saludoJugadores figure img {
-	max-width: 100%;
-	display: block;
+	color: white;	
 }
 
 .formulario {
 	width: 50%;
 	background: #c2b161;
 	margin: 1.5em auto;
-	border-radius: 5px;
 	padding: 1em 0em 1em 0em;
 }
 
 .formulario h2 {
 	color: #9e1e35;
-	margin: 1em auto 1em auto;
+	margin: 0.5em auto 0.5em auto;
 	text-align: center;
 	font-size: 2.5rem;
 }
@@ -388,6 +402,16 @@ form div input {
 	width: calc(100% - 8px);
 }
 
+.checkBtn h3 {
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.checkBtn label {
+	font-weight: bold;
+	font-size: 1.25rem;
+}
+
 textarea {
     font-family: 'Poppins', 'Trebuchet MS', sans-serif;
     border: none;
@@ -396,8 +420,51 @@ textarea {
 	margin-top: 0.5em;
 	margin-bottom: 1em;
     resize: none;
-    border-radius: 5px;
+    border-radius: 4px;
     width: calc(100% - 8px);
+}
+
+.contenedorArchivo {
+	position: relative;
+	padding: 10px;
+	background-color: #9e1e35;
+	width: 50%;
+	border-radius: 4px;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	font-size: 13.333px;
+}
+
+.contenedorArchivo p {
+	color: white;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 100;
+}
+
+.contenedorArchivo input {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.checkBtn div{
+	display: flex;
+	text-align: center;
+}
+
+.checkBtn input{
+	width: 1.5em;
+	height: 1.5em;
+	margin-right: 0.5em;
 }
 
 #enviar {
@@ -408,6 +475,59 @@ textarea {
 	font-size: 1rem;
 	cursor: pointer;
 	width: 100%;
+}
+
+textarea:focus,
+input:focus {
+	box-shadow: 
+		0 0 0 5px #c2b161,
+		0 0 0 10px #9e1e35;
+}
+
+/* Gracias */
+
+.agradecimiento {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.agradecimiento figure{
+	width: 25%;
+}
+
+.agradecimiento figure img{
+	width: 100%;
+	display: block;
+}
+
+.msjAgradecimiento {
+	width: 60%;
+	background: #e6e6e6;
+	border: 4px solid #060122;
+	color: #060122;
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	margin: 1.5em auto;
+}
+
+.msjAgradecimiento h2 {
+	text-align: left;
+	line-height: 1.2;
+	margin-bottom: 0.25em;
+}
+
+.msjAgradecimiento p {
+	text-align: left;
+	line-height: 1.8;
+}
+
+.bgImg {
+	background-image: url(../imagenes/gracias/background3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 /* Footer */

@@ -12,35 +12,35 @@
 </head>
 <body>
     <header>
-        <h1>
-            <a href="index.html">
-                <img src="imagenes/logoTunic.png" alt="Tunic">
-            </a>
-        </h1>
-        <nav class="dropdown">
-            <button class="dropbtn">
-                <img src="imagenes/hamburguerMenu.png" alt="Menú hamburguesa">
-            </button>
-            <ul class="dropdown-content">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="contenedor">
+            <h1 id="logo">
+                <a href="index.html">
+                    <img src="imagenes/logoTunic.png" alt="Tunic">
+                </a>
+            </h1>
+            <nav class="dropdown">
+                <button class="dropbtn">
+                        <img src="imagenes/hamburguerMenu.png" alt="Menú hamburguesa">
+                </button>
+                <ul class="dropdown-content">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <div class="fondoPantalla">
+        <div>
             <div class="contenedor contacto">
-                <div class="saludoJugadores">
+                <div class="complementoForm">
                     <p>En el equipo de <strong>Tunic</strong> nos entusiasma recibir <strong>mensajes</strong> de las personas <strong>seguidoras e interesadas</strong> en el juego.</p>
-                    <figure>
-                        <img src="imagenes/protagonistaSaludando.png" alt="Protagonista saludando">
-                    </figure>
                 </div>
                 <section class="formulario">
                     <h2>Contacto</h2>
-                    <form action="#" method="get">
+                    <form action="respuesta.php" method="get">
                         <div>
                             <label for="nombre">Nombre:</label>	
                             <input id="nombre" type="text" name="nombre" placeholder="Nombre" required>
@@ -48,6 +48,37 @@
                         <div>
                             <label for="correo">Correo:</label>	
                             <input id="correo" type="email" name="correo" placeholder="Correo" required>
+                        </div>
+                        <div class="fanart">
+                            <label for="fanart">Envíanos tu <span lang="en">Fanart:</span></label>	
+                            <div class="contenedorArchivo">
+                                <p>Agregar Archivo</p>
+                                <input id="fanart" name="fanart" type="file" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="checkBtn">
+                            <h3>Lo que más te gusta de TUNIC:</h3>
+                            
+                            <div>
+                                <input id="ch1" type="checkbox" value="ch1" name="ch1">
+                                <label for="ch1">La Estética</label>
+                            </div>
+                            <div>
+                                <input id="ch2" type="checkbox" value="ch2" name="ch2">					
+				                <label for="ch2">La Banda Sonora</label>	
+                            </div>
+                            <div>
+                                <input id="ch3" type="checkbox" value="ch3" name="ch3">
+                                <label for="ch3">La Exploración</label>	
+                            </div>
+                            <div>
+                                <input id="ch4" type="checkbox" value="ch4" name="ch4">
+                                <label for="ch4">La Dificultad</label>
+                            </div>
+                            <div>
+                                <input id="ch5" type="checkbox" value="ch5" name="ch5">
+                                <label for="ch5">Los Secretos</label>
+                            </div>													
                         </div>
                         <div>
                             <label for="mensaje">Mensaje:</label>	
